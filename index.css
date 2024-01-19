@@ -1,0 +1,548 @@
+:root {
+  --default-font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Ubuntu, "Helvetica Neue", Helvetica, Arial, "PingFang SC",
+    "Hiragino Sans GB", "Microsoft Yahei UI", "Microsoft Yahei",
+    "Source Han Sans CN", sans-serif;
+}
+
+.main-container {
+  overflow: hidden;
+}
+
+.main-container,
+.main-container * {
+  box-sizing: border-box;
+}
+
+input,
+select,
+textarea,
+button {
+  outline: 0;
+}
+
+.main-container {
+  position: relative;
+  width: 1920px;
+  height: 116px;
+  margin: 0 auto;
+  background: url(../assets/images/e31f472d-fbc7-4dc1-915c-22b08a162d36.png)
+    no-repeat center;
+  background-size: 100% 100%;
+}
+
+
+
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+.main_sec{
+background-image:url(images/background_ai.jpg);
+background-size: cover;
+width: 100%;
+height: 666px;
+color: white;
+}
+
+.text_left{
+  padding-left: 10px;
+  animation: pulse 2s infinite;
+  padding-left: 10%;
+  padding-top: 30px;
+}
+@keyframes pulse{
+  0%, 100% { transform: scale(1);}
+  50% { transform: scale(1.2);}
+}
+
+.text_right{
+  float: right;
+  padding-right: 40px;
+  padding-top: 30px;
+  animation: pulse 2s infinite;
+  padding-top: 30px;
+}
+@keyframes pulse{
+  0%, 100% { transform: scale(1);}
+  50% { transform: scale(1.2);}
+}
+
+
+
+/* for my project section */
+.my_projects{
+  animation: pulse 2s infinite;
+  text-align: center;
+  padding-top: 30px;
+}
+@keyframes pulse{
+  0%, 100% { transform: scale(1);}
+  50% { transform: scale(1.2);}
+}
+
+
+.first{
+padding-top: 50px;
+padding-bottom: 30px;
+display: inline-block;
+width: 30%;
+padding-left: 90px;
+}
+.second{
+padding-top: 50px;
+padding-left: 20px;
+padding-bottom: 30px;
+display: inline-block;
+width: 30%;
+padding-left: 90px;
+}
+.third{
+padding-top: 50px;
+padding-left: 20px;
+padding-bottom: 30px;
+display: inline-block;
+width: 30%;
+padding-left: 90px;
+}
+a{
+  color: black;
+  text-decoration: none;
+}
+footer{
+  border: 2px solid gray;
+  color: white;
+  background-image: url(images/footer_background_4.jpg);
+}
+
+
+
+
+
+
+
+
+@media only screen and (max-width: 600px){
+text_left{
+  padding-left: 10px;
+  width: 5%;
+}
+.text_right{
+  float: right;
+  padding-right: 150px;
+  padding-top: 30px;
+  width: 20%;
+}
+.first{
+padding-top: 50px;
+padding-bottom: 30px;
+display: inline-block;
+width: 100%;
+padding-left: 10px;
+}
+.second{
+padding-top: 50px;
+padding-left: 20px;
+padding-bottom: 30px;
+display: inline-block;
+width: 100%;
+padding-left: 10px;
+}
+.third{
+padding-top: 50px;
+padding-left: 20px;
+padding-bottom: 30px;
+display: inline-block;
+width: 100%;
+padding-left: 10px;
+}
+
+}
+
+
+
+
+
+
+
+
+
+/* about page */
+.profile{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 80vh;
+  background-color: #162052;
+}
+.box{
+  position:relative;
+  width: 400px;
+  height: 400px;
+  background: rgba(0,0,0,0.5);
+  border-radius: 50%;
+  overflow: hidden;
+  
+}
+.box::before{
+  content: '';
+  position: absolute;
+  inset: -10px 140px;
+  background: linear-gradient(315deg,#00ccff,#d400d4);
+  transition: 0.5s;
+  animation: animate 4s linear infinite;
+}
+.box:hover::before{
+  inset: -20px 0px;
+}
+@keyframes animate
+{
+  0%
+  {
+      transform: rotate(0deg);
+  }
+  0%
+  {
+      transform: rotate(360deg);
+  }
+}
+.box::after{
+  content: '';
+  position: absolute;
+  inset: 6px;
+  background: #162052;
+  border-radius: 50%;
+  z-index: 1;
+}
+.content{
+  position: absolute;
+  inset: 30px;
+  border: 6px solid #070a1c;
+  z-index: 3;
+  border-radius: 50%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.content img{
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: 0.5s;
+      pointer-events: none;
+      z-index: 3;
+
+}
+.box:hover .content img{
+  opacity: 0;
+}
+.content h2{
+  position: relative;
+  font-size: 1.5em;
+  text-align: center;
+  color: #fff;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+.content h2 span{
+  font-weight: 300;
+  font-size: 0.75em;
+}
+.content a{
+  position: relative;
+  margin-top: 10px;
+  padding: 10px 20px;
+  background: #fff;
+  color: #070a1c;
+  border-radius: 25px;
+  font-weight: 500;
+  font-size: 1.25em;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  text-decoration: none;
+  transition: 0.5s;
+}
+.content a:hover{
+  letter-spacing: 0.2em;
+}
+
+
+
+
+
+
+
+
+.about_text{
+  background-color: #162052;
+}
+.first_about{
+padding-top: 50px;
+padding-left: 20px;
+padding-bottom: 30px;
+display: inline-block;
+width: 30%;
+padding-left: 90px;
+}
+.second_about{
+  padding-top: 50px;
+  
+  padding-bottom: 30px;
+  display: inline-block;
+  width: 30%;
+  padding-left: 500px;
+} 
+
+@media only screen and (max-width: 767px){
+
+} 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* card */
+
+.card {
+  width: 20%;
+  height: 20%;
+  background: #07182E;
+  position:relative;
+  display: flex;
+  place-content: center;
+  place-items: center;
+  overflow: hidden;
+  border-radius: 20px;
+  margin-left: 10%;
+}
+
+.card h6 {
+  z-index: 1;
+  color: white;
+  
+}
+.card-text{
+    font-size:medium;
+}
+
+.card::before {
+  content: '';
+  position: absolute;
+  width: 100px;
+  background-image: linear-gradient(180deg, rgb(0, 183, 255), rgb(255, 48, 255));
+  height: 130%;
+  animation: rotBGimg 3s linear infinite;
+  transition: all 0.2s linear;
+}
+
+@keyframes rotBGimg {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.card::after {
+  content: '';
+  position: absolute;
+  background: #07182E;
+  ;
+  inset: 5px;
+  border-radius: 15px;
+}  
+/* .card:hover:before {
+  background-image: linear-gradient(180deg, rgb(81, 255, 0), purple);
+  animation: rotBGimg 3.5s linear infinite;
+} */
+
+.card-body{
+    z-index: 1;
+  color: white;
+  font-size: 2em;
+}
+.card-title{
+    font-size: larger;
+}
+   
+
+
+
+
+
+
+
+
+
+
+/* source code button */
+.button-icon {
+  display: flex;
+  border: 3px #fff solid;
+  width: fit-content;
+  height: fit-content;
+  cursor: pointer;
+}
+
+.icon {
+  background-color: #fff;
+  padding: 10px 10px 5px 10px;
+}
+
+.icon svg {
+  width: 25px;
+  height: 25px;
+}
+
+.cube {
+  transition: all 0.4s;
+  transform-style: preserve-3d;
+  width: 200px;
+  height: 20px;
+}
+
+.button-icon:hover {
+  border-color: #ff98a2;
+}
+
+.button-icon:hover .cube {
+  transform: rotateX(90deg);
+}
+
+.side {
+  position: absolute;
+  height: 47px;
+  width: 200px;
+  display: flex;
+  font-size: 0.8em;
+  justify-content: center;
+  align-items: center;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-weight: bold;
+}
+
+.top {
+  background: #ff98a2;
+  color: #fff;
+  transform: rotateX(-90deg) translate3d(0, 13.5px, 2em);
+}
+
+.front {
+  background: #222229;
+  color: #fff;
+  transform: translate3d(0, 0, 1em);
+}
+
+
+
+
+
+
+
+
+
+/* live demo button */
+button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 0 10px;
+  color: white;
+  text-shadow: 2px 2px rgb(116, 116, 116);
+  text-transform: uppercase;
+  cursor: pointer;
+  border: solid 2px black;
+  letter-spacing: 1px;
+  font-weight: 600;
+  font-size: 17px;
+  background-color: hsl(49deg 98% 60%);
+  border-radius: 50px;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.5s ease;
+}
+
+button:active {
+  transform: scale(0.9);
+  transition: all 100ms ease;
+}
+
+button svg {
+  transition: all 0.5s ease;
+  z-index: 2;
+}
+
+.play {
+  transition: all 0.5s ease;
+  transition-delay: 300ms;
+}
+
+button:hover svg {
+  transform: scale(3) translate(50%);
+}
+
+.now {
+  position: absolute;
+  left: 0;
+  transform: translateX(-100%);
+  transition: all 0.5s ease;
+  z-index: 2;
+}
+
+button:hover .now {
+  transform: translateX(10px);
+  transition-delay: 300ms;
+}
+
+button:hover .play {
+  transform: translateX(200%);
+  transition-delay: 300ms;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
