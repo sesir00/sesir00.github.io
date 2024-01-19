@@ -49,38 +49,20 @@ color: white;
 
 .text_left{
   padding-left: 10px;
-  animation: pulse 2s infinite;
-  padding-left: 10%;
   padding-top: 30px;
 }
-@keyframes pulse{
-  0%, 100% { transform: scale(1);}
-  50% { transform: scale(1.2);}
-}
-
 .text_right{
   float: right;
   padding-right: 40px;
   padding-top: 30px;
-  animation: pulse 2s infinite;
-  padding-top: 30px;
-}
-@keyframes pulse{
-  0%, 100% { transform: scale(1);}
-  50% { transform: scale(1.2);}
 }
 
 
 
 /* for my project section */
 .my_projects{
-  animation: pulse 2s infinite;
   text-align: center;
   padding-top: 30px;
-}
-@keyframes pulse{
-  0%, 100% { transform: scale(1);}
-  50% { transform: scale(1.2);}
 }
 
 
